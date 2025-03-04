@@ -288,25 +288,25 @@ const curriculumWeeks = [
       ]
     }
   ];
-  
-  // State for curriculum display
+
+  // Function to render curriculum weeks
   let showFullCurriculum = false;
-  
+
   // Function to render curriculum weeks
   function renderCurriculumWeeks() {
     const curriculumGrid = document.getElementById('curriculum-grid');
     curriculumGrid.innerHTML = ''; // Clear existing content
-    
+  
     // Determine which weeks to display
     const displayedWeeks = showFullCurriculum 
       ? [...curriculumWeeks, ...additionalWeeks]
       : curriculumWeeks;
-    
+  
     // Create and append week cards
     displayedWeeks.forEach((week) => {
       const weekCard = document.createElement('div');
       weekCard.className = 'bg-white text-black rounded-lg shadow-lg overflow-hidden relative';
-      
+  
       let topicsHTML = '';
       week.topics.forEach(topic => {
         topicsHTML += `
@@ -316,7 +316,7 @@ const curriculumWeeks = [
           </li>
         `;
       });
-      
+  
       weekCard.innerHTML = `
         <div class="p-6">
           <div class="text-gray-600 mb-2">Week ${week.number}</div>
@@ -326,29 +326,28 @@ const curriculumWeeks = [
             ${topicsHTML}
           </ul>
         </div>
-        <!-- Bottom blur gradient effect -->
-        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-green-900/90 via-green-900/70 to-transparent"></div>
       `;
-      
-      // Add "See Full Curriculum" button to Week 2 when not showing full curriculum
-      if (week.number === 2 && !showFullCurriculum) {
-        const buttonContainer = document.createElement('div');
-        buttonContainer.className = 'absolute bottom-12 left-0 right-0 flex justify-center z-10';
-        buttonContainer.innerHTML = `
-          <button 
-            id="see-full-curriculum"
-            class="text-white font-medium flex items-center gap-1"
-          >
-            See Full Curriculum
-            <i class="fas fa-chevron-down"></i>
-          </button>
-        `;
-        weekCard.appendChild(buttonContainer);
-      }
-      
+  
       curriculumGrid.appendChild(weekCard);
     });
-    
+  
+    // Add "See Full Curriculum" button at the bottom when not showing full curriculum
+    const seeFullBtnContainer = document.getElementById('see-full-curriculum-btn');
+    if (!showFullCurriculum) {
+      seeFullBtnContainer.innerHTML = `
+        <button 
+          id="see-full-curriculum"
+          class="text-white font-medium flex items-center gap-1 bg-green-900 py-2 px-4 rounded-lg hover:bg-green-800 transition-colors"
+        >
+          See Full Curriculum
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      `;
+      seeFullBtnContainer.classList.remove('hidden');
+    } else {
+      seeFullBtnContainer.classList.add('hidden'); // Hide the button when full curriculum is shown
+    }
+  
     // Add event listener to "See Full Curriculum" button
     const seeFullBtn = document.getElementById('see-full-curriculum');
     if (seeFullBtn) {
@@ -364,7 +363,7 @@ const curriculumWeeks = [
   function setupCurriculumInteractions() {
     // Initialize curriculum display
     renderCurriculumWeeks();
-    
+  
     // Add event listener to "Hide Full Curriculum" button
     const hideFullBtn = document.getElementById('hide-curriculum');
     hideFullBtn.addEventListener('click', () => {
@@ -377,11 +376,10 @@ const curriculumWeeks = [
   // Add to the existing DOMContentLoaded event handler
   document.addEventListener('DOMContentLoaded', function() {
     // Previous code for mobile menu, countdown, and marquee
-    
+  
     // Setup curriculum section
     setupCurriculumInteractions();
   });
-
   // Job title cycling
 function setupJobTitleAnimation() {
     const jobTitles = [

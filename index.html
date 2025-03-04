@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        LEAP
+        Gradguru
     </title>
     <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Exa:wght@100..900&display=swap"
@@ -20,7 +20,7 @@
     <style>
         body{
   font-family: Lexend Exa, sans-serif;
-  background-color: #132d19;
+  background-color: black;
 }
         .marquee-container {
             overflow: hidden;
@@ -62,12 +62,12 @@
 <body>
 
     <!-- Navbar Section -->
-    <nav class="fixed w-full bg-green-950 text-white py-10 px-6 z-1000">
+    <nav class="fixed w-full bg-black text-white py-10 px-6 z-1000">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- Logo -->
             <div class="text-2xl font-bold">
                 <a href="/" class="flex items-center">
-                    nextleap
+                    Gradguru
                 </a>
             </div>
 
@@ -140,9 +140,9 @@
             </div>
         </div>
     </nav>
-    <div class='h-20 bg-green-950'></div>
+    <div class='h-20 bg-black'></div>
     <!-- Hero Section -->
-    <section id="hero" class="w-full bg-green-950 text-white py-16">
+    <section id="hero" class="w-full bg-black text-white py-16">
         <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-start gap-12">
             <!-- Left Content Area -->
             <div class="max-w-2xl">
@@ -243,7 +243,7 @@
         </div>
     </section>
     <!-- Success Stories Slider Section -->
-    <section id="slider" class="py-16 w-full bg-green-950 overflow-hidden">
+    <section id="slider" class="py-16 w-full bg-black overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl text-white font-bold text-center mb-10">
                 750+ successful transitions
@@ -266,37 +266,32 @@
         </div>
     </section>
     <!-- Curriculum Section -->
-    <section id="curriculum" class="w-full bg-green-950 text-white py-16">
+    <section id="curriculum" class="w-full bg-black text-white py-16">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">What Will You Learn</h2>
-
-            <!-- Grid of week cards -->
-            <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" id="curriculum-grid">
-                <!-- Week cards will be inserted here via JavaScript -->
-            </div>
-
-            <!-- Toggle Button - Hidden initially -->
-            <div id="hide-curriculum-btn" class="flex justify-center mt-6 mb-12 hidden">
-                <button id="hide-curriculum"
-                    class="flex items-center gap-2 bg-white text-green-950 font-medium py-2 px-4 rounded shadow-sm hover:bg-gray-100 transition-colors">
-                    Hide Full Curriculum
-                    <i class="fas fa-chevron-up"></i>
-                </button>
-            </div>
-
-            <!-- Download Button -->
-            <div class="flex justify-center items-center">
-                <a href="#" class="flex items-center gap-2 border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white hover:text-green-900 transition-all duration-300 transform hover:scale-105">
-                  Download detailed curriculum
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="ml-1" viewBox="0 0 24 24">
-                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
-                  </svg>
-                </a>
-              </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">What Will You Learn</h2>
+      
+          <!-- Grid of week cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" id="curriculum-grid">
+            <!-- Week cards will be inserted here via JavaScript -->
+          </div>
+      
+          <!-- Container for "See Full Curriculum" button -->
+          <div id="see-full-curriculum-btn" class="flex justify-center mt-6 mb-12">
+            <!-- Button will be inserted here via JavaScript -->
+          </div>
+      
+          <!-- Toggle Button - Hidden initially -->
+          <div id="hide-curriculum-btn" class="flex justify-center mt-6 mb-12 hidden">
+            <button id="hide-curriculum"
+              class="flex items-center gap-2 bg-white text-green-950 font-medium py-2 px-4 rounded shadow-sm hover:bg-gray-100 transition-colors">
+              Hide Full Curriculum
+              <i class="fas fa-chevron-up"></i>
+            </button>
+          </div>
         </div>
-    </section>
+      </section>
     <!-- Live Class Schedule -->
-    <section id="live-class" class="w-full bg-green-950 text-white py-16">
+    <section id="live-class" class="w-full bg-black text-white py-16">
         <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Live Class Schedule</h2>
@@ -368,7 +363,7 @@
         </div>
     </section>
     <!-- Placement Support -->
-    <section id="placement" class="bg-green-950 text-white p-4 min-h-screen">
+    <section id="placement" class="bg-black text-white p-4 min-h-screen">
         <!-- Callback Card -->
         <div
             class="bg-green-900/50 rounded-lg p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mx-auto max-w-7xl mb-20">
@@ -431,7 +426,7 @@
         <div class="border-t-2 border-gray-600 max-w-6xl mx-auto mt-16"></div>
     </section>
     <!-- Job Title Component -->
-    <section id="job-title" class="bg-green-950 text-white min-h-screen flex flex-col items-center justify-center p-6">
+    <section id="job-title" class="bg-black text-white min-h-screen flex flex-col items-center justify-center p-6">
         <div class="max-w-5xl w-full space-y-16">
             <!-- Job Title Section -->
             <div class="text-center mb-4">
@@ -506,7 +501,7 @@
         </div>
     </section>
     <!-- Build Skills Component -->
-    <section id="build-skills" class="bg-green-950 text-white min-h-screen flex flex-col items-center py-16 px-4">
+    <section id="build-skills" class="bg-black text-white min-h-screen flex flex-col items-center py-16 px-4">
         <div class="max-w-6xl w-full">
             <div class="border-t-3 border-gray-600 max-w-6xl mx-0 mt-16 mb-16"></div>
 
@@ -565,7 +560,7 @@
         </div>
     </section>
     <!-- Tools Section -->
-    <section id="tools" class="bg-green-950 py-12">
+    <section id="tools" class="bg-black py-12">
         <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
         <div class="max-w-6xl mx-auto px-4">
             <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 lg:mb-20">
@@ -618,7 +613,7 @@
     </section>
     <!-- Certificate Section -->
     <section id="certificate"
-        class="w-full bg-green-950 flex flex-col md:flex-row items-center justify-between p-6 md:gap-0">
+        class="w-full bg-black flex flex-col md:flex-row items-center justify-between p-6 md:gap-0">
         <!-- Left side - Certificate Image -->
         <div class="w-full md:w-2/5 mb-8 md:mb-0 md:pr-2">
             <img src="assets/cert.webp" alt="Certificate of Completion" class="w-full max-w-md mx-auto" />
@@ -638,7 +633,7 @@
         </div>
     </section>
     <!-- FAQ Section -->
-    <section id="faq" class="bg-green-950 w-full min-h-screen px-4 pt-6 pb-12">
+    <section id="faq" class="bg-black w-full min-h-screen px-4 pt-6 pb-12">
         <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
         <div class="max-w-4xl mx-auto">
             <h1 class="text-white text-5xl font-bold mb-16">Frequently Asked Questions</h1>
@@ -650,7 +645,7 @@
     </section>
 
     <!-- Contact Card -->
-    <section id="contact" class="bg-green-950 px-4 pt-6 pb-24">
+    <section id="contact" class="bg-black px-4 pt-6 pb-24">
         <div class="w-full max-w-4xl mx-auto bg-green-800 rounded-lg shadow-lg p-12 relative overflow-hidden">
             <!-- Main Content -->
             <div class="text-center z-10 relative">
