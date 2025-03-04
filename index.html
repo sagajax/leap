@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Exa:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style type="text/tailwindcss">
+        @theme {
+          --color-clifford: #da373d;
+        }
+    </style>
+    <style>
+        body{
+  font-family: Lexend Exa, sans-serif;
+}
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .marquee-content {
+            display: flex;
+            position: relative;
+            white-space: nowrap;
+        }
+    </style>
+    <style>
+        /* Job title animation */
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: it'1;
+
+            }
+        }
+
+        .animate-slideUp {
+            animation: slideUp 0.6s ease-out;
+        }
+
+        /* Other styles as needed */
+    </style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="fixed w-full bg-green-950 text-white py-10 px-6 z-1000">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold">
+                <a href="/" class="flex items-center">
+                    nextleap
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-10 lg:space-x-16">
+                <div class="relative group">
+                    <button class="flex items-center text-white hover:text-green-300 focus:outline-none">
+                        Courses
+                    </button>
+                </div>
+
+                <a href="/reviews" class="text-white hover:text-green-300">
+                    NextLeap Reviews
+                </a>
+
+                <a href="/hire" class="text-white hover:text-green-300">
+                    Hire From Us
+                </a>
+
+                <a href="/blog" class="text-white hover:text-green-300">
+                    Blog
+                </a>
+            </div>
+
+            <!-- Login Button -->
+            <div class="hidden md:block">
+                <a href="/login" class="text-white hover:text-green-300">
+                    Login
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white hover:text-green-300 focus:outline-none">
+                    <!-- Menu Icon (using Font Awesome instead of Lucide) -->
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden mt-4 bg-green-900 rounded-md p-4 hidden">
+            <div class="flex flex-col space-y-4">
+                <div>
+                    <button class="flex items-center text-white hover:text-green-300 focus:outline-none">
+                        Courses
+                        <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="/reviews" class="text-white hover:text-green-300">
+                    NextLeap Reviews
+                </a>
+
+                <a href="/hire" class="text-white hover:text-green-300">
+                    Hire From Us
+                </a>
+
+                <a href="/blog" class="text-white hover:text-green-300">
+                    Blog
+                </a>
+
+                <a href="/login" class="text-white hover:text-green-300">
+                    Login
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class='h-20 bg-green-950'></div>
+    <!-- Hero Section -->
+    <section id="hero" class="w-full bg-green-950 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-start gap-12">
+            <!-- Left Content Area -->
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4">
+                    Product Manager Fellowship
+                </h1>
+                <p class="text-xl mb-10">
+                    12 week online Product Management Course with Certification and Placement Support
+                </p>
+
+                <!-- Program Features -->
+                <div class="flex flex-col md:flex-row gap-1 mb-12 rounded-2xl overflow-hidden">
+                    <div class="bg-green-900/50 p-4 text-center flex-1">
+                        <h3 class="text-xl font-semibold">Live</h3>
+                        <p class="text-gray-300 text-xs">Sessions on Zoom</p>
+                    </div>
+                    <div class="bg-green-900/50 p-4 text-center flex-1">
+                        <h3 class="text-xl font-semibold">3 months</h3>
+                        <p class="text-gray-300 text-xs">Fellowship timeline</p>
+                    </div>
+                    <div class="bg-green-900/50 p-4 text-center flex-1">
+                        <h3 class="text-xl font-semibold">Mentorship</h3>
+                        <p class="text-gray-300 text-xs">With experienced PMs</p>
+                    </div>
+                    <div class="bg-green-900/50 p-4 text-center flex-1">
+                        <h3 class="text-xl font-semibold">Placement</h3>
+                        <p class="text-gray-300 text-xs">Support for 1 year</p>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="flex items-center justify-center gap-2 bg-amber-100 text-green-950 py-3 px-6 rounded-md font-medium hover:bg-amber-200 transition-colors">
+                        <i class="fas fa-phone text-lg"></i>
+                        Request a callback
+                    </button>
+                    <button
+                        class="flex items-center justify-center gap-2 bg-white text-green-950 py-3 px-6 rounded-md font-medium hover:bg-gray-100 transition-colors">
+                        Download Curriculum
+                        <i class="fas fa-download text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Pricing Card -->
+            <div class="w-full lg:w-auto">
+                <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden relative w-full max-w-md">
+                    <!-- Discount Badge -->
+                    <div class="absolute top-0 right-0">
+                        <div class="bg-green-600 text-white font-bold px-4 py-1 text-center relative">
+                            <span class="text-xl">35%</span>
+                            <span class="block text-xs">OFF</span>
+                            <div
+                                class="absolute bottom-0 left-0 w-0 h-0 border-t-8 border-t-transparent border-r-8 border-r-green-600">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upper Part of the Card -->
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-1">Cohort 36 starts on</p>
+                        <p class="text-2xl font-bold mb-4">Apr 5</p>
+
+                        <p class="text-gray-600 mb-1">Cost</p>
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="text-4xl font-bold">₹25,999</span>
+                            <span class="text-gray-500 line-through">₹39,999</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">EMI from ₹1,421/month available at checkout</p>
+
+                        <div class="flex items-center gap-2 mb-6">
+                            <div
+                                class="bg-purple-100 text-purple-600 rounded-full w-6 h-6 flex items-center justify-center">
+                                <span class="font-bold">i</span>
+                            </div>
+                            <span>
+                                Price increases in
+                                <span class="text-red-500 font-semibold" id="countdown-timer">22:27:33</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Lower Part of the Card with Different Background -->
+                    <div class="bg-gray-100 p-6">
+                        <button
+                            class="w-full bg-black text-white py-3 px-4 rounded-md font-medium hover:bg-gray-800 transition-colors flex items-center justify-between">
+                            Enrol Now
+                            <span>→</span>
+                        </button>
+
+                        <p class="text-sm text-gray-600 mt-4 text-center">
+                            Discount coupon of 35% available on checkout
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Success Stories Slider Section -->
+    <section id="slider" class="py-16 bg-green-950 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl text-white font-bold text-center mb-10">
+                750+ successful transitions
+            </h2>
+
+            <div class="relative">
+                <!-- Left blur/fade effect -->
+                <div class="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
+
+                <!-- Right blur/fade effect -->
+                <div class="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+                <!-- Marquee slider -->
+                <div class="marquee-container" id="success-stories-marquee">
+                    <div class="marquee-content flex">
+                        <!-- This will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="w-full bg-green-950 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">What Will You Learn</h2>
+
+            <!-- Grid of week cards -->
+            <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" id="curriculum-grid">
+                <!-- Week cards will be inserted here via JavaScript -->
+            </div>
+
+            <!-- Toggle Button - Hidden initially -->
+            <div id="hide-curriculum-btn" class="flex justify-center mt-6 mb-12 hidden">
+                <button id="hide-curriculum"
+                    class="flex items-center gap-2 bg-white text-green-950 font-medium py-2 px-4 rounded shadow-sm hover:bg-gray-100 transition-colors">
+                    Hide Full Curriculum
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+
+            <!-- Download Button -->
+            <div class="flex justify-center items-center">
+                <a href="#" class="flex items-center gap-2 border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white hover:text-green-900 transition-all duration-300 transform hover:scale-105">
+                  Download detailed curriculum
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="ml-1" viewBox="0 0 24 24">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+                  </svg>
+                </a>
+              </div>
+        </div>
+    </section>
+    <!-- Live Class Schedule -->
+    <section id="live-class" class="w-full bg-green-950 text-white py-16">
+        <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Live Class Schedule</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Saturday Card -->
+                <div class="bg-green-800 rounded-lg overflow-hidden">
+                    <!-- Top Section -->
+                    <div class="p-6 pb-8 bg-green-700/90">
+                        <div class="bg-white rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                            <i class="fas fa-calendar-alt h-6 w-6 text-green-950"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Every Saturday</h3>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">2 Live Classes</h4>
+                        <p class="text-gray-300">
+                            10:30 AM - 12:30 PM &amp;
+                        </p>
+                        <p class="text-gray-300">
+                            2:00 PM - 4:00 PM IST
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sunday Card -->
+                <div class="bg-green-800 rounded-lg overflow-hidden">
+                    <!-- Top Section -->
+                    <div class="p-6 pb-8 bg-green-700/90">
+                        <div class="bg-white rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                            <i class="fas fa-calendar-alt h-6 w-6 text-green-950"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Every Sunday</h3>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Mentor Session & Case Hours</h4>
+                        <p class="text-gray-300">
+                            Mentor Session (10:30 AM - 12:30 PM IST)
+                        </p>
+                        <p class="text-gray-300">
+                            Case Hours (2:00 PM - 4:00 PM IST)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Wednesday Card -->
+                <div class="bg-green-800 rounded-lg overflow-hidden">
+                    <!-- Top Section -->
+                    <div class="p-6 pb-8 bg-green-700/90">
+                        <div class="bg-white rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                            <i class="fas fa-calendar-alt h-6 w-6 text-green-950"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Every Wednesday</h3>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Product Challenge</h4>
+                        <p class="text-gray-200">
+                            08:00 PM - 10:00 PM IST
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Placement Support -->
+    <section id="placement" class="bg-green-950 text-white p-4 min-h-screen">
+        <!-- Callback Card -->
+        <div
+            class="bg-green-900/50 rounded-lg p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mx-auto max-w-7xl mb-20">
+            <div class="flex items-center gap-4">
+                <div class="bg-gray-700 rounded-full w-16 h-16 flex items-center justify-center overflow-hidden">
+                    <img src="assets/a.webp" alt="Support agent" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Have more questions or need more information?</h3>
+                    <p class="text-gray-300">Request a callback to get personalized guidance</p>
+                </div>
+            </div>
+            <div>
+                <button
+                    class="bg-yellow-200 hover:bg-yellow-300 text-black font-medium py-3 px-6 rounded-lg flex items-center gap-2">
+                    <i class="fas fa-phone text-lg"></i>
+                    Request a callback
+                </button>
+            </div>
+        </div>
+
+        <div class="border-t-2 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
+
+        <!-- Main Heading -->
+        <div class="text-center mb-6">
+            <h1 class="text-5xl font-bold mb-4">1 Year Placement Support</h1>
+            <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                Clear the cut-off marks in your graduation project to get access to jobs at our partner companies
+            </p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-16">
+            <!-- Mock Interviews -->
+            <div class="flex flex-col items-center text-center">
+                <div class="text-yellow-200 mb-4">
+                    <i class="fas fa-user text-5xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold">Mock Interviews</h2>
+            </div>
+
+            <!-- Resume Reviews -->
+            <div class="flex flex-col items-center text-center">
+                <div class="text-yellow-200 mb-4">
+                    <i class="fas fa-file-alt text-5xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold">Resume Reviews</h2>
+            </div>
+
+            <!-- Interview with Hiring Partners -->
+            <div class="flex flex-col items-center text-center">
+                <div class="text-yellow-200 mb-4">
+                    <i class="fas fa-clipboard text-5xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold">Interview with Hiring Partners</h2>
+            </div>
+        </div>
+
+        <!-- Divider Lines -->
+        <div class="border-t-2 border-gray-600 max-w-6xl mx-auto mt-16"></div>
+    </section>
+    <!-- Job Title Component -->
+    <section id="job-title" class="bg-green-950 text-white min-h-screen flex flex-col items-center justify-center p-6">
+        <div class="max-w-5xl w-full space-y-16">
+            <!-- Job Title Section -->
+            <div class="text-center mb-4">
+                <h2 class="text-2xl font-medium text-white">Your Future Job Title</h2>
+
+                <div class="h-52 flex items-center justify-center overflow-hidden">
+                    <h1 id="job-title-text" class="text-6xl font-bold text-white">
+                        Product Manager
+                    </h1>
+                </div>
+
+                <div class="w-full border-t border-white/20 mt-4 mb-12"></div>
+            </div>
+
+            <!-- Salary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-green-800/70 rounded-lg p-8">
+                    <h3 class="text-xl font-medium text-center mb-2">Average PM Salary</h3>
+                    <p class="text-4xl font-bold text-center">14-18 Lakhs</p>
+                </div>
+
+                <div class="bg-green-800/70 rounded-lg p-8">
+                    <h3 class="text-xl font-medium text-center mb-2">Highest Salary at NextLeap</h3>
+                    <p class="text-4xl font-bold text-center">31 Lakhs</p>
+                </div>
+            </div>
+
+            <!-- Cohort Section -->
+            <div class="pt-8">
+                <h2 class="text-3xl font-bold text-white text-center mb-10">How Your Avg Cohort Looks Like</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-green-800/70 rounded-lg p-8 flex flex-col items-center">
+                        <p class="text-5xl font-bold text-white mb-2">20%</p>
+                        <p class="text-xl text-white">College students</p>
+                    </div>
+
+                    <div class="bg-green-800/70 rounded-lg p-8 flex flex-col items-center">
+                        <p class="text-5xl font-bold text-white mb-2">80%</p>
+                        <p class="text-xl text-white">Working professionals</p>
+                    </div>
+
+                    <div class="bg-green-800/70 rounded-lg p-8 flex flex-col items-center">
+                        <p class="text-5xl font-bold text-white mb-2">3 years</p>
+                        <p class="text-xl text-white">Median work experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t-3 border-gray-600 max-w-6xl mx-0 mt-16 mb-16"></div>
+
+            <!-- Scholarship Section -->
+            <div class="bg-green-50 text-black rounded-lg p-6 my-12">
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-black mb-3">
+                            Win a 15% Scholarship with our #LearninPublic challenge
+                        </h2>
+                        <p class="text-base mb-4">
+                            Post 10 product teardowns on LinkedIn during the fellowship to win back 15% of the
+                            fellowship fees.
+                        </p>
+                    </div>
+
+                    <div class="md:w-1/2 relative h-full">
+                        <!-- LinkedIn Posts -->
+                        <img src="assets/posts.png" alt="LinkedIn Posts"
+                            class="w-full h-full object-cover rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Build Skills Component -->
+    <section id="build-skills" class="bg-green-950 text-white min-h-screen flex flex-col items-center py-16 px-4">
+        <div class="max-w-6xl w-full">
+            <div class="border-t-3 border-gray-600 max-w-6xl mx-0 mt-16 mb-16"></div>
+
+            <!-- Heading -->
+            <h2 class="text-4xl font-bold text-center mb-16">Build Skills The Nextleap Way</h2>
+
+            <!-- Learning Features -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 max-w-4xl mx-auto">
+                <div class="flex flex-col items-center">
+                    <div class="text-yellow-200 mb-4">
+                        <i class="fas fa-desktop text-4xl"></i>
+                    </div>
+                    <p class="text-xl text-center">Live Sessions</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-yellow-200 mb-4">
+                        <i class="fas fa-file-alt text-4xl"></i>
+                    </div>
+                    <p class="text-xl text-center">Weekly Projects</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-yellow-200 mb-4">
+                        <i class="fas fa-clipboard-check text-4xl"></i>
+                    </div>
+                    <p class="text-xl text-center">Mentor Feedback</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-yellow-200 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <p class="text-xl text-center">Peer Learning</p>
+                </div>
+            </div>
+
+            <!-- Profile Cards Container -->
+            <div class="overflow-hidden">
+                <div id="profile-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Profile cards will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-end mt-6 gap-2">
+                <button id="prev-profile-btn"
+                    class="bg-white hover:bg-gray-100 p-3 rounded-lg shadow-sm transition-colors">
+                    <i class="fas fa-chevron-left text-gray-800 text-xl"></i>
+                </button>
+                <button id="next-profile-btn"
+                    class="bg-white hover:bg-gray-100 p-3 rounded-lg shadow-sm transition-colors">
+                    <i class="fas fa-chevron-right text-gray-800 text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Tools Section -->
+    <section id="tools" class="bg-green-950 py-12">
+        <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 lg:mb-20">
+                Tools You Will Learn
+            </h1>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 px-4 sm:px-8">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
+                        <img src="assets/Whimiscal.svg" alt="Whimsical icon" class="w-12 h-12 sm:w-16 sm:h-16" />
+                    </div>
+                    <p class="text-white text-lg sm:text-xl font-medium text-center">Whimsical</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div
+                        class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
+                        <img src="assets/Figma.svg" alt="Figma icon" class="w-12 h-12 sm:w-16 sm:h-16" />
+                    </div>
+                    <p class="text-white text-lg sm:text-xl font-medium text-center">Figma</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div
+                        class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
+                        <img src="assets/sql.svg" alt="SQL icon" class="w-12 h-12 sm:w-16 sm:h-16" />
+                    </div>
+                    <p class="text-white text-lg sm:text-xl font-medium text-center">SQL</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div
+                        class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
+                        <img src="assets/Amplitude.svg" alt="Amplitude icon" class="w-12 h-12 sm:w-16 sm:h-16" />
+                    </div>
+                    <p class="text-white text-lg sm:text-xl font-medium text-center">Amplitude</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div
+                        class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
+                        <img src="assets/jira.svg" alt="JIRA icon" class="w-12 h-12 sm:w-16 sm:h-16" />
+                    </div>
+                    <p class="text-white text-lg sm:text-xl font-medium text-center">JIRA</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
+    </section>
+    <!-- Certificate Section -->
+    <section id="certificate"
+        class="w-full bg-green-950 flex flex-col md:flex-row items-center justify-between p-6 md:gap-0">
+        <!-- Left side - Certificate Image -->
+        <div class="w-full md:w-2/5 mb-8 md:mb-0 md:pr-2">
+            <img src="assets/cert.webp" alt="Certificate of Completion" class="w-full max-w-md mx-auto" />
+        </div>
+
+        <!-- Right side - Text Content -->
+        <div class="w-full md:w-3/5 text-white px-2 md:pl-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                Verifiable Certificate of Accomplishment
+            </h1>
+
+            <p class="text-lg md:text-xl mb-6">
+                Upon completing the Product Manager Fellowship course, you'll receive a
+                verifiable Certificate of Accomplishment that you can link to from your
+                Résumé and LinkedIn profile.
+            </p>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-green-950 w-full min-h-screen px-4 pt-6 pb-12">
+        <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-white text-5xl font-bold mb-16">Frequently Asked Questions</h1>
+
+            <ul class="space-y-6" id="faq-list">
+                <!-- FAQ items will be dynamically added here -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Card -->
+    <section id="contact" class="bg-green-950 px-4 pt-6 pb-24">
+        <div class="w-full max-w-4xl mx-auto bg-green-800 rounded-lg shadow-lg p-12 relative overflow-hidden">
+            <!-- Main Content -->
+            <div class="text-center z-10 relative">
+                <h2 class="text-4xl font-bold text-white mb-3">
+                    Still have questions or need more information?
+                </h2>
+                <p class="text-white text-lg mb-10">
+                    Request a callback to get personalized guidance
+                </p>
+
+                <!-- Button -->
+                <div class="flex justify-center">
+                    <button
+                        class="flex items-center justify-center bg-yellow-100 hover:bg-yellow-200 text-green-900 font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                        <i class="fas fa-phone mr-2"></i>
+                        Request a callback
+                    </button>
+                </div>
+            </div>
+
+            <!-- Background Pattern -->
+            <div class="absolute bottom-0 left-0 w-full">
+                <img src="assets/contactbg.svg" alt="Decorative pattern" class="w-full h-24 object-cover" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Fixed Navbar -->
+    <div id="bottom-fixed-navbar" class="fixed bottom-0 left-0 right-0 bg-white z-50 transition-all duration-300"
+        style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1); transform: translateY(100%);">
+        <!-- Mobile version -->
+        <div id="mobile-navbar" class="flex justify-between items-center p-4">
+            <div class="flex flex-col">
+                <div class="text-sm font-semibold text-gray-600">Cohort 36 starts on</div>
+                <div class="text-lg font-bold">Apr 5</div>
+            </div>
+            <button
+                class="flex items-center space-x-2 bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-800 transition text-sm">
+                <span>Enrol Now</span>
+                <i class="fas fa-arrow-right text-sm ml-2"></i>
+            </button>
+        </div>
+
+        <!-- Desktop version -->
+        <div id="desktop-navbar"
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center hidden">
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
+                <div class="text-center md:text-left">
+                    <div class="text-sm md:text-base font-semibold text-gray-600">Cohort 36 starts on</div>
+                    <div class="text-lg md:text-xl font-bold">Apr 5</div>
+                </div>
+
+                <div class="hidden md:block h-12 border-l border-gray-200"></div>
+
+                <div class="text-center md:text-left">
+                    <div class="text-sm md:text-base font-semibold text-gray-600">Time Commitment</div>
+                    <div class="text-lg md:text-xl font-bold">12-14 hours / week</div>
+                </div>
+
+                <div class="hidden md:block h-12 border-l border-gray-200"></div>
+
+                <div class="text-center md:text-left">
+                    <div class="text-sm md:text-base font-semibold text-gray-600">Cost</div>
+                    <div class="flex items-baseline justify-center md:justify-start">
+                        <span class="text-lg md:text-xl font-bold">₹25,999</span>
+                        <span class="ml-2 text-gray-500 line-through text-sm">₹39,999</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button
+                    class="flex items-center space-x-2 bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-800 transition text-sm md:text-base">
+                    <span>Enrol Now</span>
+                    <i class="fas fa-arrow-right text-sm ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
