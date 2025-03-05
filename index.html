@@ -62,84 +62,49 @@
 <body>
 
     <!-- Navbar Section -->
+    
     <nav class="fixed w-full bg-black text-white py-10 px-6 z-1000">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- Logo -->
             <div class="text-2xl font-bold">
-                <a href="/" class="flex items-center">
-                    Gradguru
-                </a>
+                <a href="/" class="flex items-center">Gradguru</a>
             </div>
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-10 lg:space-x-16">
                 <div class="relative group">
-                    <button class="flex items-center text-white hover:text-green-300 focus:outline-none">
-                        Courses
-                    </button>
+                    <button class="flex items-center text-white hover:text-green-300 focus:outline-none">Courses</button>
                 </div>
-
-                <a href="/reviews" class="text-white hover:text-green-300">
-                    NextLeap Reviews
-                </a>
-
-                <a href="/hire" class="text-white hover:text-green-300">
-                    Hire From Us
-                </a>
-
-                <a href="/blog" class="text-white hover:text-green-300">
-                    Blog
-                </a>
+                <a href="/reviews" class="text-white hover:text-green-300">NextLeap Reviews</a>
+                <a href="/hire" class="text-white hover:text-green-300">Hire From Us</a>
+                <a href="/blog" class="text-white hover:text-green-300">Blog</a>
             </div>
 
             <!-- Login Button -->
             <div class="hidden md:block">
-                <a href="/login" class="text-white hover:text-green-300">
-                    Login
-                </a>
+                <a href="/login" class="text-white hover:text-green-300">Login</a>
             </div>
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-white hover:text-green-300 focus:outline-none">
-                    <!-- Menu Icon (using Font Awesome instead of Lucide) -->
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu (hidden by default) -->
-        <div id="mobile-menu" class="md:hidden mt-4 bg-green-900 rounded-md p-4 hidden">
+        <div id="mobile-menu" class="md:hidden mt-4 bg-white rounded-md p-4 hidden flex-col">
             <div class="flex flex-col space-y-4">
-                <div>
-                    <button class="flex items-center text-white hover:text-green-300 focus:outline-none">
-                        Courses
-                        <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-
-                <a href="/reviews" class="text-white hover:text-green-300">
-                    NextLeap Reviews
-                </a>
-
-                <a href="/hire" class="text-white hover:text-green-300">
-                    Hire From Us
-                </a>
-
-                <a href="/blog" class="text-white hover:text-green-300">
-                    Blog
-                </a>
-
-                <a href="/login" class="text-white hover:text-green-300">
-                    Login
-                </a>
+                <a href="/courses" class="text-black hover:text-green-300">Courses</a>
+                <a href="/reviews" class="text-black hover:text-green-300">NextLeap Reviews</a>
+                <a href="/hire" class="text-black hover:text-green-300">Hire From Us</a>
+                <a href="/blog" class="text-black hover:text-green-300">Blog</a>
+                <a href="/login" class="text-black hover:text-green-300">Login</a>
             </div>
         </div>
     </nav>
+
     <div class='h-20 bg-black'></div>
     <!-- Hero Section -->
     <section id="hero" class="w-full bg-black text-white py-16">
@@ -643,6 +608,139 @@
             </ul>
         </div>
     </section>
+
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-12">Pricing plans</h1>
+        
+        <div class="flex flex-col md:flex-row gap-8 justify-center">
+          <!-- Self Paced Plan -->
+          <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-1/2 max-w-lg">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Self Paced</h2>
+            <div class="text-3xl font-bold text-gray-800 mb-8">
+              <span class="text-2xl">₹</span> 4,999
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">Certificate for Course Completion</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">1 Minor and 1 Major project</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">25+ hours of Video Content Access</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">6 Months LMS Access</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700  px-2 py-1 rounded">Up to 4 hours of mentor assistance</p>
+              </div>
+            </div>
+            
+            <button class="w-full mt-8 bg-indigo-800 hover:bg-indigo-900 text-white font-bold py-3 px-4 rounded text-lg">
+              Enroll Now
+            </button>
+          </div>
+          
+          <!-- Mentor Led Plan -->
+          <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-1/2 max-w-lg">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Mentor Led</h2>
+            <div class="text-3xl font-bold text-gray-800 mb-8">
+              <span class="text-2xl">₹</span> 6,999
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">Certificate for Course Completion</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">1 Minor and 1 Major project</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">Internship Completion Certificate</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">25+ hours of Video Content Access</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">6 Months LMS Access</p>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-lg text-gray-700">16+ hours mentor training & project assistance</p>
+              </div>
+            </div>
+            
+            <button class="w-full mt-8 bg-indigo-800 hover:bg-indigo-900 text-white font-bold py-3 px-4 rounded text-lg">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+      </section>
 
     <!-- Contact Card -->
     <section id="contact" class="bg-black px-4 pt-6 pb-24">

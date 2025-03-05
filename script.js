@@ -1,12 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
+    console.log("Script loaded!");
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-    
+
     mobileMenuButton.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
+        console.log("Button clicked!");
+        if (mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.toggle('flex');
+
+        } else {
+            mobileMenu.classList.toggle('flex');
+            mobileMenu.classList.add('hidden');
+        }
     });
-  });
+});
+
   // Add this to your existing script.js file
 
 // Countdown timer functionality
