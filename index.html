@@ -8,9 +8,8 @@
         Gradguru
     </title>
     <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Exa:wght@100..900&display=swap"
-    rel="stylesheet"
-  />
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Exa:wght@100..900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style type="text/tailwindcss">
         @theme {
@@ -18,10 +17,15 @@
         }
     </style>
     <style>
-        body{
-  font-family: Lexend Exa, sans-serif;
-  background-color: black;
-}
+        body {
+            font-family: Lexend Exa, sans-serif;
+        }
+
+        #slider {
+            background-image: url('assets/nbg.png');
+            background-size: fill;
+        }
+
         .marquee-container {
             overflow: hidden;
             position: relative;
@@ -62,8 +66,8 @@
 <body>
 
     <!-- Navbar Section -->
-    
-    <nav class="fixed w-full bg-black text-white py-10 px-6 z-1000">
+
+    <nav class="fixed w-full bg-white text-black py-6 px-6 z-1000 ">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- Logo -->
             <div class="text-2xl font-bold">
@@ -73,21 +77,22 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-10 lg:space-x-16">
                 <div class="relative group">
-                    <button class="flex items-center text-white hover:text-green-300 focus:outline-none">Courses</button>
+                    <button
+                        class="flex items-center text-black hover:text-green-300 focus:outline-none">Courses</button>
                 </div>
-                <a href="/reviews" class="text-white hover:text-green-300">NextLeap Reviews</a>
-                <a href="/hire" class="text-white hover:text-green-300">Hire From Us</a>
-                <a href="/blog" class="text-white hover:text-green-300">Blog</a>
+                <a href="/reviews" class="text-black hover:text-green-300">NextLeap Reviews</a>
+                <a href="/hire" class="text-black hover:text-green-300">Hire From Us</a>
+                <a href="/blog" class="text-black hover:text-green-300">Blog</a>
             </div>
 
             <!-- Login Button -->
             <div class="hidden md:block">
-                <a href="/login" class="text-white hover:text-green-300">Login</a>
+                <a href="/login" class="text-black hover:text-green-300">Login</a>
             </div>
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white hover:text-green-300 focus:outline-none">
+                <button id="mobile-menu-button" class="text-black hover:text-green-300 focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -105,9 +110,8 @@
         </div>
     </nav>
 
-    <div class='h-20 bg-black'></div>
     <!-- Hero Section -->
-    <section id="hero" class="w-full bg-black text-white py-16">
+    <section id="hero" class="w-full inline-block bg-gradient-to-tr from-blue-500 via-blue-600 to-[#121623] text-black py-16 mt-12">
         <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-start gap-12">
             <!-- Left Content Area -->
             <div class="max-w-2xl">
@@ -158,7 +162,7 @@
                 <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden relative w-full max-w-md">
                     <!-- Discount Badge -->
                     <div class="absolute top-0 right-0">
-                        <div class="bg-green-600 text-white font-bold px-4 py-1 text-center relative">
+                        <div class="bg-green-600 text-black font-bold px-4 py-1 text-center relative">
                             <span class="text-xl">35%</span>
                             <span class="block text-xs">OFF</span>
                             <div
@@ -194,7 +198,7 @@
                     <!-- Lower Part of the Card with Different Background -->
                     <div class="bg-gray-100 p-6">
                         <button
-                            class="w-full bg-black text-white py-3 px-4 rounded-md font-medium hover:bg-gray-800 transition-colors flex items-center justify-between">
+                            class="w-full bg-white text-black py-3 px-4 rounded-md font-medium hover:bg-gray-800 transition-colors flex items-center justify-between">
                             Enrol Now
                             <span>→</span>
                         </button>
@@ -208,9 +212,9 @@
         </div>
     </section>
     <!-- Success Stories Slider Section -->
-    <section id="slider" class="py-16 w-full bg-black overflow-hidden">
+    <section id="slider" class="py-16 w-full bg-white  overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl text-white font-bold text-center mb-10">
+            <h2 class="text-3xl text-black font-bold text-center mb-10">
                 750+ successful transitions
             </h2>
 
@@ -231,32 +235,32 @@
         </div>
     </section>
     <!-- Curriculum Section -->
-    <section id="curriculum" class="w-full bg-black text-white py-16">
+    <section id="curriculum" class="w-full   text-black py-16">
         <div class="max-w-7xl mx-auto px-6">
-          <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">What Will You Learn</h2>
-      
-          <!-- Grid of week cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" id="curriculum-grid">
-            <!-- Week cards will be inserted here via JavaScript -->
-          </div>
-      
-          <!-- Container for "See Full Curriculum" button -->
-          <div id="see-full-curriculum-btn" class="flex justify-center mt-6 mb-12">
-            <!-- Button will be inserted here via JavaScript -->
-          </div>
-      
-          <!-- Toggle Button - Hidden initially -->
-          <div id="hide-curriculum-btn" class="flex justify-center mt-6 mb-12 hidden">
-            <button id="hide-curriculum"
-              class="flex items-center gap-2 bg-white text-green-950 font-medium py-2 px-4 rounded shadow-sm hover:bg-gray-100 transition-colors">
-              Hide Full Curriculum
-              <i class="fas fa-chevron-up"></i>
-            </button>
-          </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">What Will You Learn</h2>
+
+            <!-- Grid of week cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" id="curriculum-grid">
+                <!-- Week cards will be inserted here via JavaScript -->
+            </div>
+
+            <!-- Container for "See Full Curriculum" button -->
+            <div id="see-full-curriculum-btn" class="flex justify-center mt-6 mb-12">
+                <!-- Button will be inserted here via JavaScript -->
+            </div>
+
+            <!-- Toggle Button - Hidden initially -->
+            <div id="hide-curriculum-btn" class="flex justify-center mt-6 mb-12 hidden">
+                <button id="hide-curriculum"
+                    class="flex items-center gap-2 bg-white text-green-950 font-medium py-2 px-4 rounded shadow-sm hover:bg-gray-100 transition-colors">
+                    Hide Full Curriculum
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
         </div>
-      </section>
+    </section>
     <!-- Live Class Schedule -->
-    <section id="live-class" class="w-full bg-black text-white py-16">
+    <section id="live-class" class="w-full bg-white text-black py-16">
         <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Live Class Schedule</h2>
@@ -328,7 +332,7 @@
         </div>
     </section>
     <!-- Placement Support -->
-    <section id="placement" class="bg-black text-white p-4 min-h-screen">
+    <section id="placement" class="bg-white text-black p-4 min-h-screen">
         <!-- Callback Card -->
         <div
             class="bg-green-900/50 rounded-lg p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mx-auto max-w-7xl mb-20">
@@ -391,14 +395,14 @@
         <div class="border-t-2 border-gray-600 max-w-6xl mx-auto mt-16"></div>
     </section>
     <!-- Job Title Component -->
-    <section id="job-title" class="bg-black text-white min-h-screen flex flex-col items-center justify-center p-6">
+    <section id="job-title" class="bg-white text-black min-h-screen flex flex-col items-center justify-center p-6">
         <div class="max-w-5xl w-full space-y-16">
             <!-- Job Title Section -->
             <div class="text-center mb-4">
-                <h2 class="text-2xl font-medium text-white">Your Future Job Title</h2>
+                <h2 class="text-2xl font-medium text-black">Your Future Job Title</h2>
 
                 <div class="h-52 flex items-center justify-center overflow-hidden">
-                    <h1 id="job-title-text" class="text-6xl font-bold text-white">
+                    <h1 id="job-title-text" class="text-6xl font-bold text-black">
                         Product Manager
                     </h1>
                 </div>
@@ -421,22 +425,22 @@
 
             <!-- Cohort Section -->
             <div class="pt-8">
-                <h2 class="text-3xl font-bold text-white text-center mb-10">How Your Avg Cohort Looks Like</h2>
+                <h2 class="text-3xl font-bold text-black text-center mb-10">How Your Avg Cohort Looks Like</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-green-800/70 rounded-lg p-8 flex flex-col items-center">
-                        <p class="text-5xl font-bold text-white mb-2">20%</p>
-                        <p class="text-xl text-white">College students</p>
+                        <p class="text-5xl font-bold text-black mb-2">20%</p>
+                        <p class="text-xl text-black">College students</p>
                     </div>
 
                     <div class="bg-green-800/70 rounded-lg p-8 flex flex-col items-center">
-                        <p class="text-5xl font-bold text-white mb-2">80%</p>
-                        <p class="text-xl text-white">Working professionals</p>
+                        <p class="text-5xl font-bold text-black mb-2">80%</p>
+                        <p class="text-xl text-black">Working professionals</p>
                     </div>
 
                     <div class="bg-green-800/70 rounded-lg p-8 flex flex-col items-center">
-                        <p class="text-5xl font-bold text-white mb-2">3 years</p>
-                        <p class="text-xl text-white">Median work experience</p>
+                        <p class="text-5xl font-bold text-black mb-2">3 years</p>
+                        <p class="text-xl text-black">Median work experience</p>
                     </div>
                 </div>
             </div>
@@ -466,7 +470,7 @@
         </div>
     </section>
     <!-- Build Skills Component -->
-    <section id="build-skills" class="bg-black text-white min-h-screen flex flex-col items-center py-16 px-4">
+    <section id="build-skills" class="bg-white text-black min-h-screen flex flex-col items-center py-16 px-4">
         <div class="max-w-6xl w-full">
             <div class="border-t-3 border-gray-600 max-w-6xl mx-0 mt-16 mb-16"></div>
 
@@ -525,10 +529,10 @@
         </div>
     </section>
     <!-- Tools Section -->
-    <section id="tools" class="bg-black py-12">
+    <section id="tools" class="bg-white py-12">
         <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
         <div class="max-w-6xl mx-auto px-4">
-            <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 lg:mb-20">
+            <h1 class="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 lg:mb-20">
                 Tools You Will Learn
             </h1>
 
@@ -538,7 +542,7 @@
                         class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
                         <img src="assets/Whimiscal.svg" alt="Whimsical icon" class="w-12 h-12 sm:w-16 sm:h-16" />
                     </div>
-                    <p class="text-white text-lg sm:text-xl font-medium text-center">Whimsical</p>
+                    <p class="text-black text-lg sm:text-xl font-medium text-center">Whimsical</p>
                 </div>
 
                 <div class="flex flex-col items-center">
@@ -546,7 +550,7 @@
                         class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
                         <img src="assets/Figma.svg" alt="Figma icon" class="w-12 h-12 sm:w-16 sm:h-16" />
                     </div>
-                    <p class="text-white text-lg sm:text-xl font-medium text-center">Figma</p>
+                    <p class="text-black text-lg sm:text-xl font-medium text-center">Figma</p>
                 </div>
 
                 <div class="flex flex-col items-center">
@@ -554,7 +558,7 @@
                         class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
                         <img src="assets/sql.svg" alt="SQL icon" class="w-12 h-12 sm:w-16 sm:h-16" />
                     </div>
-                    <p class="text-white text-lg sm:text-xl font-medium text-center">SQL</p>
+                    <p class="text-black text-lg sm:text-xl font-medium text-center">SQL</p>
                 </div>
 
                 <div class="flex flex-col items-center">
@@ -562,7 +566,7 @@
                         class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
                         <img src="assets/Amplitude.svg" alt="Amplitude icon" class="w-12 h-12 sm:w-16 sm:h-16" />
                     </div>
-                    <p class="text-white text-lg sm:text-xl font-medium text-center">Amplitude</p>
+                    <p class="text-black text-lg sm:text-xl font-medium text-center">Amplitude</p>
                 </div>
 
                 <div class="flex flex-col items-center">
@@ -570,7 +574,7 @@
                         class="bg-white rounded-md mb-4 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
                         <img src="assets/jira.svg" alt="JIRA icon" class="w-12 h-12 sm:w-16 sm:h-16" />
                     </div>
-                    <p class="text-white text-lg sm:text-xl font-medium text-center">JIRA</p>
+                    <p class="text-black text-lg sm:text-xl font-medium text-center">JIRA</p>
                 </div>
             </div>
         </div>
@@ -578,14 +582,14 @@
     </section>
     <!-- Certificate Section -->
     <section id="certificate"
-        class="w-full bg-black flex flex-col md:flex-row items-center justify-between p-6 md:gap-0">
+        class="w-full bg-white flex flex-col md:flex-row items-center justify-between p-6 md:gap-0">
         <!-- Left side - Certificate Image -->
         <div class="w-full md:w-2/5 mb-8 md:mb-0 md:pr-2">
             <img src="assets/cert.webp" alt="Certificate of Completion" class="w-full max-w-md mx-auto" />
         </div>
 
         <!-- Right side - Text Content -->
-        <div class="w-full md:w-3/5 text-white px-2 md:pl-4">
+        <div class="w-full md:w-3/5 text-black px-2 md:pl-4">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">
                 Verifiable Certificate of Accomplishment
             </h1>
@@ -598,159 +602,183 @@
         </div>
     </section>
     <!-- FAQ Section -->
-    <section id="faq" class="bg-black w-full min-h-screen px-4 pt-6 pb-12">
+    <section id="faq" class="bg-white w-full min-h-screen px-4 pt-6 pb-12">
         <div class="border-t-3 border-gray-600 max-w-6xl mx-auto mt-16 mb-16"></div>
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-white text-5xl font-bold mb-16">Frequently Asked Questions</h1>
+            <h1 class="text-black text-5xl font-bold mb-16">Frequently Asked Questions</h1>
 
             <ul class="space-y-6" id="faq-list">
                 <!-- FAQ items will be dynamically added here -->
             </ul>
         </div>
     </section>
-
+    <!--Pricing Cards-->
     <section class="py-16 px-4 max-w-6xl mx-auto">
-        <h1 class="text-4xl font-bold text-center text-white mb-12">Pricing plans</h1>
-        
+        <h1 class="text-4xl font-bold text-center text-black mb-12">Pricing plans</h1>
+
         <div class="flex flex-col md:flex-row gap-8 justify-center">
-          <!-- Self Paced Plan -->
-          <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-1/2 max-w-lg">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">Self Paced</h2>
-            <div class="text-3xl font-bold text-gray-800 mb-8">
-              <span class="text-2xl">₹</span> 4,999
+            <!-- Self Paced Plan -->
+            <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-1/2 max-w-lg">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Self Paced</h2>
+                <div class="text-3xl font-bold text-gray-800 mb-8">
+                    <span class="text-2xl">₹</span> 4,999
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">Certificate for Course Completion</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">1 Minor and 1 Major project</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">25+ hours of Video Content Access</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">6 Months LMS Access</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700  px-2 py-1 rounded">Up to 4 hours of mentor assistance</p>
+                    </div>
+                </div>
+
+                <button
+                    class="w-full mt-8 bg-indigo-800 hover:bg-indigo-900 text-black font-bold py-3 px-4 rounded text-lg">
+                    Enroll Now
+                </button>
             </div>
-            
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
+
+            <!-- Mentor Led Plan -->
+            <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-1/2 max-w-lg">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Mentor Led</h2>
+                <div class="text-3xl font-bold text-gray-800 mb-8">
+                    <span class="text-2xl">₹</span> 6,999
                 </div>
-                <p class="ml-3 text-lg text-gray-700">Certificate for Course Completion</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
+
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">Certificate for Course Completion</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">1 Minor and 1 Major project</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">Internship Completion Certificate</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">25+ hours of Video Content Access</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">6 Months LMS Access</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-lg text-gray-700">16+ hours mentor training & project assistance</p>
+                    </div>
                 </div>
-                <p class="ml-3 text-lg text-gray-700">1 Minor and 1 Major project</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700">25+ hours of Video Content Access</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700">6 Months LMS Access</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700  px-2 py-1 rounded">Up to 4 hours of mentor assistance</p>
-              </div>
+
+                <button
+                    class="w-full mt-8 bg-indigo-800 hover:bg-indigo-900 text-black font-bold py-3 px-4 rounded text-lg">
+                    Enroll Now
+                </button>
             </div>
-            
-            <button class="w-full mt-8 bg-indigo-800 hover:bg-indigo-900 text-white font-bold py-3 px-4 rounded text-lg">
-              Enroll Now
-            </button>
-          </div>
-          
-          <!-- Mentor Led Plan -->
-          <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-1/2 max-w-lg">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">Mentor Led</h2>
-            <div class="text-3xl font-bold text-gray-800 mb-8">
-              <span class="text-2xl">₹</span> 6,999
-            </div>
-            
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700">Certificate for Course Completion</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700">1 Minor and 1 Major project</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700">Internship Completion Certificate</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700">25+ hours of Video Content Access</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700">6 Months LMS Access</p>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex-shrink-0 h-6 w-6 mt-0.5 text-indigo-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-lg text-gray-700">16+ hours mentor training & project assistance</p>
-              </div>
-            </div>
-            
-            <button class="w-full mt-8 bg-indigo-800 hover:bg-indigo-900 text-white font-bold py-3 px-4 rounded text-lg">
-              Enroll Now
-            </button>
-          </div>
         </div>
-      </section>
+    </section>
 
     <!-- Contact Card -->
-    <section id="contact" class="bg-black px-4 pt-6 pb-24">
+    <section id="contact" class="bg-white px-4 pt-6 pb-24">
         <div class="w-full max-w-4xl mx-auto bg-green-800 rounded-lg shadow-lg p-12 relative overflow-hidden">
             <!-- Main Content -->
             <div class="text-center z-10 relative">
-                <h2 class="text-4xl font-bold text-white mb-3">
+                <h2 class="text-4xl font-bold text-black mb-3">
                     Still have questions or need more information?
                 </h2>
-                <p class="text-white text-lg mb-10">
+                <p class="text-black text-lg mb-10">
                     Request a callback to get personalized guidance
                 </p>
 
@@ -781,7 +809,7 @@
                 <div class="text-lg font-bold">Apr 5</div>
             </div>
             <button
-                class="flex items-center space-x-2 bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-800 transition text-sm">
+                class="flex items-center space-x-2 bg-white text-black rounded-lg px-4 py-2 hover:bg-gray-800 transition text-sm">
                 <span>Enrol Now</span>
                 <i class="fas fa-arrow-right text-sm ml-2"></i>
             </button>
@@ -816,7 +844,7 @@
 
             <div class="flex items-center space-x-4">
                 <button
-                    class="flex items-center space-x-2 bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-800 transition text-sm md:text-base">
+                    class="flex items-center space-x-2 bg-white text-black rounded-lg px-4 py-2 hover:bg-gray-800 transition text-sm md:text-base">
                     <span>Enrol Now</span>
                     <i class="fas fa-arrow-right text-sm ml-2"></i>
                 </button>
