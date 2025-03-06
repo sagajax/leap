@@ -346,7 +346,7 @@ const curriculumWeeks = [
       seeFullBtnContainer.innerHTML = `
         <button 
           id="see-full-curriculum"
-          class="text-white font-medium flex items-center gap-1 bg-green-900 py-2 px-4 rounded-lg hover:bg-green-800 transition-colors"
+          class="text-black font-medium flex items-center gap-1 bg-green-900 py-2 px-4 rounded-lg hover:bg-green-800 transition-colors"
         >
           See Full Curriculum
           <i class="fas fa-chevron-down"></i>
@@ -623,7 +623,7 @@ function setupFAQ() {
       
       faqItem.innerHTML = `
         <button
-          class="w-full flex justify-between items-center text-left text-white font-medium faq-button"
+          class="w-full flex justify-between items-center text-left text-black font-medium faq-button"
           data-index="${index}"
         >
           <span class="flex items-center">
@@ -632,7 +632,7 @@ function setupFAQ() {
           </span>
           <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-200 faq-icon"></i>
         </button>
-        <div class="mt-2 text-white pl-6 hidden faq-answer">
+        <div class="mt-2 text-black pl-6 hidden faq-answer">
           ${item.answer}
         </div>
       `;
